@@ -433,53 +433,76 @@ footer p {
     background-color: #1e3523;
 }
 
-/* Telegram CTA Block */
-.telegram-cta {
-    background-color: #f0f4f1;
-    border-top: 1px solid #e0e7e1;
-    border-bottom: 1px solid #e0e7e1;
-    padding: 60px 0;
-    text-align: center;
-}
-
-.telegram-box {
-    max-width: 800px;
-    margin: 0 auto;
+/* Compact Telegram Banner */
+.compact-cta {
     background: #fff;
-    padding: 40px;
-    border-radius: 8px;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 40px auto;
+    gap: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
-.telegram-box h2 {
-    color: #2481cc;
-    /* Telegram brand colorish */
-    margin-bottom: 1rem;
-}
-
-.telegram-box i {
-    font-size: 3rem;
-    color: #2481cc;
-    margin-bottom: 1rem;
-}
-
-.btn-telegram {
-    display: inline-flex;
+.cta-left {
+    display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+}
+
+.cta-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #f0f4f1;
+}
+
+.cta-info h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.cta-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+.btn-telegram-compact {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     background-color: #2481cc;
     color: #fff;
-    padding: 15px 30px;
-    border-radius: 50px;
+    padding: 10px 20px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    margin-top: 1.5rem;
-    transition: transform 0.3s, background 0.3s;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    white-space: nowrap;
 }
 
-.btn-telegram:hover {
+.btn-telegram-compact:hover {
     background-color: #1c66a3;
-    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .compact-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+
+    .cta-left {
+        flex-direction: column;
+    }
 }
 
 /* Market Section */
