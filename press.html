@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corylus Press | Світова Аналітика Фундука</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .press-hero {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        .press-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .press-grid {
+            padding: 80px 0;
+        }
+
+        .article-card-large {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: #fff;
+            border: 1px solid #eee;
+            margin-bottom: 40px;
+            transition: 0.3s;
+        }
+
+        .article-card-large:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-img-box {
+            height: 100%;
+            min-height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .article-txt-box {
+            padding: 40px;
+        }
+
+        .article-meta {
+            color: var(--secondary-color);
+            font-family: var(--font-tech);
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        @media (max-width: 992px) {
+            .article-card-large {
+                grid-template-columns: 1fr;
+            }
+
+            .article-img-box {
+                height: 250px;
+            }
+
+            .press-hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Reports Section Styles */
+        .reports-section {
+            background-color: #f8faf9;
+            padding: 80px 0;
+            border-top: 1px solid #eee;
+        }
+
+        .reports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .report-card {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #e0e7e1;
+            border-bottom: 4px solid var(--primary-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .report-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .report-type {
+            font-family: var(--font-tech);
+            font-size: 0.75rem;
+            color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .report-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        .report-card p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .btn-download:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation (Copied from index) -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">Corylus Tech</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">Про нас</a></li>
+                <li><a href="press.html">Corylus Press</a></li>
+                <li><a href="index.html#market">Corylus Market</a></li>
+                <li><a href="index.html#expert">Експерт</a></li>
+                <li><a href="index.html#footer">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="press-hero">
+        <div class="container">
+            <span class="article-meta" style="color: #e0e0e0; letter-spacing: 2px;">AUTHORITATIVE AGRO-MAGAZINE</span>
+            <h1>Corylus Press</h1>
+            <p>Світові тренди, огляди нових сортів та передові італійські технології.</p>
+        </div>
+    </header>
+
+    <section class="press-grid">
+        <div class="container">
+            <!-- Featured Article -->
+            <div class="article-card-large">
+                <div class="article-img-box" style="background-image: url('hero_genetics.jpg');"></div>
+                <div class="article-txt-box">
+                    <span class="article-meta">21.02.2026 | ТЕХНОЛОГІЇ ІТАЛІЇ</span>
+                    <h2>Аналіз італійських сортів для клімату України</h2>
+                    <p>Які сорти вибирають професіонали сьогодні? Порівняльний аналіз Tonda di Giffoni та Ferragnes в
+                        умовах температурних коливань 2025 року.</p>
+                    <a href="article-sample.html?id=italy-vs-ukraine" class="btn-read-more"
+                        style="margin-top: 2rem;">Читати повний
+                        аналіз</a>
+                </div>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Card 2 -->
+                <article class="article-card">
+                    <div class="article-image" style="background-image: url('drone_tech.jpg');"></div>
+                    <div class="article-content">
+                        <span class="article-meta">15.02.2026 | SMART-AGRO</span>
+                        <h3>Smart-моніторинг: Як дрони рятують врожай</h3>
+                        <p>Використання мультиспектральних камер для виявлення дефіциту азоту на ранніх стадіях до появи
+                            візуальних ознак.</p>
+                        <a href="article-sample.html?id=drone-monitoring" class="btn-read-more">Читати повністю</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="article-card">
+                    <div class="article-image" style="background-image: url('market_trends.jpg');"></div>
+                    <div class="article-content">
+                        <span class="article-meta">10.02.2026 | РИНОК ТА ЦІНИ</span>
+                        <h3>Економіка фундука 2026: Прогнози ринку</h3>
+                        <p>Попит на ядро високої якості зростає. Аналіз експортних можливостей для українських фермерів
+                            у ЄС.</p>
+                        <a href="article-sample.html?id=hazelnut-economy" class="btn-read-more">Читати повністю</a>
+                    </div>
+                </article>
+
+                <!-- Card 4: Historical Cycles -->
+                <article class="article-card">
+                    <div class="article-image" style="background-image: url('hazelnut_price_cycle.png');"></div>
+                    <div class="article-content">
+                        <span class="article-meta">21.02.2026 | АНАЛІТИКА ЦІН</span>
+                        <h3>Історичні цикли ринку: чи чекати піку у 2025?</h3>
+                        <p>Аналіз 30-річної циклічності цін. Чому історія вказує на початок нового "бичачого" тренду та
+                            можливі рекорди 2025-2026 років.</p>
+                        <a href="article-sample.html?id=price-cycles" class="btn-read-more">Читати повністю</a>
+                    </div>
+                </article>
+
+                <!-- Card 5: Price Anomaly -->
+                <article class="article-card">
+                    <div class="article-image" style="background-image: url('hazelnut_price_anomaly.png');"></div>
+                    <div class="article-content">
+                        <span class="article-meta">21.02.2026 | ГЛОБАЛЬНИЙ РИНОК</span>
+                        <h3>Цінова аномалія 2024: США проти Європи</h3>
+                        <p>Чому розрив у цінах між США та Туреччиною сягнув 46%? Аналіз європейської стабільності та
+                            перспектив для інвесторів.</p>
+                        <a href="article-sample.html?id=price-anomaly" class="btn-read-more">Читати повністю</a>
+                    </div>
+                </article>
+
+                <!-- Card 6: Resilience Lessons -->
+                <article class="article-card">
+                    <div class="article-image" style="background-image: url('hazelnut_resilience.png');"></div>
+                    <div class="article-content">
+                        <span class="article-meta">21.02.2026 | СТРАТЕГІЯ</span>
+                        <h3>Уроки кризи 2022: Хто вистояв?</h3>
+                        <p>Чому преміальні ринки Італії виявилися стійкішими за масовий сегмент Грузії та США.
+                            Інвестиції в якість як страховка.</p>
+                        <a href="article-sample.html?id=crisis-lessons" class="btn-read-more">Читати повністю</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deep Analytics Section -->
+    <section class="reports-section" id="reports">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Whitepapers & Deep Analytics</h2>
+            <p style="text-align: center; color: #666; max-width: 700px; margin: 0 auto 40px;">
+                Ексклюзивні звіти, створені на базі штучного інтелекту NotebookLM та нашої власної бази знань.
+            </p>
+            <div class="reports-grid" id="reports-container">
+                <!-- Dynamically loaded -->
+                <p style="text-align: center; grid-column: 1/-1;">Завантаження звітів...</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Telegram Follow Section -->
+    <section class="telegram-cta" style="background: #fff; border-top: 1px solid #eee;">
+        <div class="container">
+            <div class="telegram-box" style="border: none; box-shadow: none;">
+                <i class="fab fa-telegram"></i>
+                <h2>Підписуйтесь на аналітику</h2>
+                <p>Отримуйте короткі тизери нових випусків у нашому Telegram-каналі <strong>«Corylus Press | Новини
+                        фундука»</strong>.</p>
+                <a href="https://t.me/your_channel" class="btn-telegram">Підписатися на канал</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2026 Corylus Tech.</p>
+            <p>Науковий супровід та саджанці.</p>
+        </div>
+    </footer>
+
+    <script src="reports/registry.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('reports-container');
+            try {
+                // reportsData is loaded from registry.js
+                if (typeof reportsData === 'undefined' || reportsData.length === 0) {
+                    container.innerHTML = '<p style="text-align: center; grid-column: 1/-1;">Наразі звітів немає.</p>';
+                    return;
+                }
+
+                container.innerHTML = reportsData.map(report => `
+                    <div class="report-card">
+                        <span class="report-type"><i class="fas fa-file-pdf"></i> ${report.type}</span>
+                        <h3>${report.title}</h3>
+                        <p>${report.description}</p>
+                        <div class="article-meta" style="margin-bottom: 15px;">${new Date(report.date).toLocaleDateString('uk-UA')}</div>
+                        <a href="reports/${report.filename}" target="_blank" class="btn-download">
+                            Відкрити PDF <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                `).join('');
+            } catch (error) {
+                console.error('Error rendering reports:', error);
+                container.innerHTML = '<p style="text-align: center; grid-column: 1/-1; color: red;">Помилка відображення. Будь ласка, перевірте registry.js.</p>';
+            }
+        });
+    </script>
+
+</body>
+
+
+</html>

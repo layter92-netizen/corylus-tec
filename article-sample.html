@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Аналіз італійських сортів | Corylus Tech</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .article-page {
+            padding: 120px 0 100px;
+        }
+
+        /* Added top padding for sticky nav */
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .article-header h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .article-meta {
+            color: var(--secondary-color);
+            font-family: var(--font-tech);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .article-main-image {
+            width: 100%;
+            height: 450px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+
+        .article-body {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .article-body p {
+            margin-bottom: 1.8rem;
+        }
+
+        .article-body h2 {
+            color: var(--primary-color);
+            margin-top: 3rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .article-body ul {
+            margin-bottom: 1.8rem;
+            padding-left: 20px;
+        }
+
+        .article-body blockquote {
+            border-left: 5px solid var(--primary-color);
+            padding: 30px;
+            background: #f9f9f9;
+            font-style: italic;
+            margin-bottom: 2.5rem;
+            font-size: 1.25rem;
+        }
+
+        .nav-back {
+            margin-bottom: 3rem;
+        }
+
+        .nav-back a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-cta {
+            background: #f0f4f1;
+            padding: 50px;
+            border-radius: 8px;
+            margin-top: 5rem;
+            text-align: center;
+            border: 1px solid #e0e7e1;
+        }
+
+        .article-cta h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.2rem;
+            font-size: 1.8rem;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 4px;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+
+        .btn-cta:hover {
+            background: #1e3523;
+        }
+
+        @media (max-width: 768px) {
+            .article-header h1 {
+                font-size: 2.2rem;
+            }
+
+            .article-main-image {
+                height: 250px;
+            }
+
+            .article-body {
+                font-size: 1.05rem;
+            }
+
+            .article-page {
+                padding-top: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation (Copied from index) -->
+    <nav class="main-nav">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">Corylus Tech</a>
+            <ul class="nav-links">
+                <li><a href="index.html#about">Про нас</a></li>
+                <li><a href="press.html">Corylus Press</a></li>
+                <li><a href="index.html#market">Corylus Market</a></li>
+                <li><a href="index.html#expert">Експерт</a></li>
+                <li><a href="index.html#footer">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="article-page">
+        <div class="container">
+            <div class="nav-back">
+                <a href="press.html"><i class="fas fa-arrow-left"></i> Назад до Corylus Press</a>
+            </div>
+
+            <header class="article-header">
+                <span class="article-meta"></span>
+                <h1> завантаження...</h1>
+            </header>
+
+            <div class="article-main-image" style="background-image: url('');"></div>
+
+            <div class="article-body">
+                <!-- Content injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="container">
+            <p>&copy; 2026 Corylus Tech.</p>
+            <p><a href="https://t.me/your_channel" style="color: #fff; text-decoration: none;"><i
+                        class="fab fa-telegram"></i> Telegram: Corylus Press</a></p>
+        </div>
+    </footer>
+
+    <script src="articles/registry.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const articleId = params.get('id');
+
+            const titleEl = document.querySelector('.article-header h1');
+            const metaEl = document.querySelector('.article-meta');
+            const imageEl = document.querySelector('.article-main-image');
+            const bodyEl = document.querySelector('.article-body');
+
+            if (!articleId || !articlesData[articleId]) {
+                titleEl.textContent = 'Статтю не знайдено';
+                metaEl.style.display = 'none';
+                imageEl.style.display = 'none';
+                bodyEl.innerHTML = '<p>На жаль, запитувана стаття не існує або була переміщена.</p><a href="press.html" class="btn-cta">Повернутися до Corylus Press</a>';
+                return;
+            }
+
+            const article = articlesData[articleId];
+
+            // Site title update
+            document.title = `${article.title} | Corylus Tech`;
+
+            titleEl.textContent = article.title;
+            metaEl.textContent = `${article.date} | ${article.category}`;
+            imageEl.style.backgroundImage = `url('${article.image}')`;
+
+            // Injects the body while preserving the CTA
+            const ctaHtml = `
+                <div class="article-cta">
+                    <h3>Потрібна допомога з підбором сорту?</h3>
+                    <p>Наші експерти допоможуть проаналізувати ваш ґрунт та підібрати оптимальну технологічну карту для вашого регіону.</p>
+                    <a href="index.html#about" class="btn-cta">Перейти до Консалтингу</a>
+                </div>
+            `;
+            bodyEl.innerHTML = article.content + ctaHtml;
+        });
+    </script>
+
+</body>
+
+</html>
