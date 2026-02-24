@@ -22,8 +22,7 @@
                 <li><a href="#about">Про нас</a></li>
                 <li><a href="#blog">Corylus Press</a></li>
                 <li><a href="#market">Corylus Market</a></li>
-                <li><a href="#expert">Експерт</a></li>
-                <li><a href="#footer">Контакти</a></li>
+                <li><a href="#footer">Зв'язатися з нами</a></li>
             </ul>
         </div>
     </nav>
@@ -237,25 +236,26 @@
     <!-- Expert Section -->
     <section class="expert" id="expert">
         <div class="container">
-            <div class="expert-layout">
-                <div class="expert-image">
-                    <!-- Placeholder for user's photo. Ensure the file is named expert.jpg or png -->
+            <div class="expert-layout variant-1">
+                <div class="expert-image-v1">
                     <img src="expert.jpg" alt="Євгеній Лайтер" onerror="this.src='expert_placeholder.jpg'">
                 </div>
-                <div class="expert-info">
-                    <h2 class="section-title">Експерт</h2>
-                    <h3>Засновник Corylus Tech — Євгеній Лайтер</h3>
-                    <div class="expert-quote">
-                        <p>"Маючи досвід у реалізації масштабних проектів (закладка садів від 500 га), я розумію, що
-                            успіх криється в деталях. Corylus Tech — це мій погляд на сучасне горіхівництво: від
-                            правильного вибору саджанця до автоматизації збору врожаю."</p>
+                <div class="expert-info-v1">
+                    <div class="expert-quote-v1">
+                        <span class="quote-mark">“</span>
+                        <p>Corylus Tech — це мій погляд на сучасне вирощування фундука. Починаючи від правильного вибору
+                            ділянки, саджанця, запилювачів закінчуючи збором врожаю.</p>
+                    </div>
+                    <div class="expert-signature">
+                        <h2 class="expert-name">Євгеній Лайтер</h2>
+                        <h3 class="expert-role">Засновник Corylus Tech</h3>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
-    <!-- Partners Section -->
+    <!-- Partners Section (Тимчасово приховано) -->
+    <!--
     <section class="partners">
         <div class="container">
             <h2 class="section-title">Наші партнери</h2>
@@ -267,20 +267,15 @@
                     <img src="partner_eft.png" alt="E.F.T. Group" title="E.F.T. Group - садова техніка">
                 </div>
                 <div class="partner-logo">
-                    <img src="partner_eridon.png" alt="Ерідон" title="Ерідон - засоби захисту та добрива">
+                    <img src="partner_terratarsa..png" alt="ТерраТарса" title="ТерраТарса - комплексні добрива">
                 </div>
                 <div class="partner-logo">
-                    <img src="partner_terratarsa.png" alt="ТерраТарса" title="ТерраТарса - комплексні добрива">
-                </div>
-                <div class="partner-logo">
-                    <img src="partner_summit.png" alt="Summit-Agro" title="Summit-Agro - засоби захисту рослин">
-                </div>
-                <div class="partner-logo">
-                    <img src="partner_solar.png" alt="Partner Solar" title="Сонячні електростанції">
+                    <img src="partner_summit..png" alt="Summit-Agro" title="Summit-Agro - засоби захисту рослин">
                 </div>
             </div>
         </div>
     </section>
+    -->
 
     <!-- Telegram CTA Section -->
     <section id="telegram">
@@ -304,8 +299,34 @@
     <footer id="footer">
         <div class="container">
             <p>&copy; 2026 Corylus Tech.</p>
-            <p>Науковий супровід та саджанці.</p>
-            <p><i class="fas fa-envelope"></i> Email: info@corylus.tech</p>
+            <p>Супровід та консультації.</p>
+
+            <!-- Контактна форма у футері -->
+            <div class="footer-contact">
+                <h3 style="color: #fff; margin-bottom: 20px; font-size: 1.2rem;">Зв'язатися з нами</h3>
+                <form action="https://api.web3forms.com/submit" method="POST" class="corylus-form footer-form"
+                    style="max-width: 400px; margin: 0 auto; text-align: left;">
+                    <!-- Ключ, що був наданий користувачем раніше -->
+                    <input type="hidden" name="access_key" value="debd2ede-fdb2-4301-b510-f349de31e943">
+                    <input type="hidden" name="subject" value="Нове повідомлення з сайту Corylus Tech (Контакти)">
+                    <input type="hidden" name="from_name" value="Відвідувач сайту Corylus Тех">
+
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <input type="text" name="contact_info" required placeholder="Ваш телефон або Email"
+                            style="width: 100%; padding: 12px; border-radius: 4px; border: none;">
+                    </div>
+
+                    <div class="form-group" style="margin-bottom: 15px;">
+                        <textarea name="message" required placeholder="Ваше повідомлення..." rows="3"
+                            style="width: 100%; padding: 12px; border-radius: 4px; border: none; font-family: inherit; resize: vertical;"></textarea>
+                    </div>
+
+                    <!-- Антиспам поле -->
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <button type="submit" class="btn-form" style="margin-top: 5px;">Надіслати</button>
+                </form>
+            </div>
             <div style="margin-top: 20px;">
                 <a href="https://t.me/corylus_press" target="_blank"
                     style="color: #fff; text-decoration: none; margin: 0 10px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.2); padding: 5px 15px; border-radius: 20px;">

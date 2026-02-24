@@ -223,62 +223,90 @@ section {
     margin-bottom: 1rem;
 }
 
-/* Expert Section */
+/* Expert Section - Variant 1 (Minimalism) */
 .expert {
-    background-color: #fff;
+    background-color: #FAFAFA;
 }
 
-.expert-layout {
+.variant-1 {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
 }
 
-.expert-image {
-    flex: 1;
-    min-width: 300px;
+.expert-image-v1 {
+    flex: 0.5;
+    /* Зменшуємо долю простору для фото */
+    min-width: 250px;
+    max-width: 350px;
+    /* Обмежуємо максимальну ширину */
+    position: relative;
+    margin: 0 auto;
+    /* Центруємо якщо екран маленький */
 }
 
-.expert-image img {
+.expert-image-v1 img {
     width: 100%;
     height: auto;
-    border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    filter: grayscale(20%);
-    /* Slightly desaturated for tech feel */
-    transition: filter 0.3s;
+    display: block;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* Додамо легке закруглення для гарнішого вигляду без рамки */
 }
 
-.expert-image img:hover {
-    filter: grayscale(0%);
-}
-
-.expert-info {
-    flex: 1;
+.expert-info-v1 {
+    flex: 1.5;
     min-width: 300px;
+    padding-right: 20px;
 }
 
-.expert-info .section-title {
-    text-align: left;
-    margin: 0 0 1rem 0;
-}
-
-.expert-info .section-title::after {
-    margin: 15px 0 0 0;
-}
-
-.expert-info h3 {
-    font-size: 1.3rem;
-    color: #555;
+.expert-quote-v1 {
+    position: relative;
     margin-bottom: 2rem;
 }
 
-.expert-quote {
-    padding-left: 20px;
-    border-left: 4px solid var(--primary-color);
+.quote-mark {
+    font-size: 6rem;
+    color: var(--primary-color);
+    opacity: 0.2;
+    position: absolute;
+    top: -40px;
+    left: -20px;
+    font-family: serif;
+    line-height: 1;
+}
+
+.expert-quote-v1 p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #333;
     font-style: italic;
-    color: #444;
+    position: relative;
+    z-index: 2;
+}
+
+.expert-signature {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--border-color);
+}
+
+.expert-name {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
+}
+
+.expert-role {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* Partners Section */
@@ -296,18 +324,19 @@ section {
 }
 
 .partner-logo {
-    width: 150px;
-    height: 80px;
+    flex: 1;
+    min-width: 150px;
+    max-width: 250px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    opacity: 0.7;
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    filter: grayscale(100%);
+    align-items: center;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .partner-logo:hover {
-    opacity: 1;
     transform: scale(1.05);
     filter: grayscale(0%);
 }
