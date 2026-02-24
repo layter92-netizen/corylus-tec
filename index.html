@@ -212,6 +212,16 @@
                                 placeholder="Київська обл., Біла Церква">
                         </div>
 
+                        <div class="form-group">
+                            <label for="payment">Форма оплати *</label>
+                            <select id="payment" name="payment" required>
+                                <option value="" disabled selected>Оберіть форму оплати...</option>
+                                <option value="Готівка">Готівка (Налічка)</option>
+                                <option value="ФОП">Безготівка (ФОП)</option>
+                                <option value="ТОВ (з ПДВ)">Безготівка (ТОВ з ПДВ)</option>
+                            </select>
+                        </div>
+
                         <!-- Антиспам поле -->
                         <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
