@@ -64,27 +64,32 @@
                     <div class="card-image" style="background-image: url('drone_tech.jpg');"></div>
                     <div class="card-content">
                         <h3>Smart-Садівництво</h3>
-                        <p>Ми не гадаємо на кавовій гущі — ми використовуємо дані. Моніторинг стану дерев дронами DJI,
-                            аналіз ґрунту та інтеграція штучного інтелекту дозволяють виявляти потреби рослин ще до
-                            появи видимих симптомів. Технологічність — це економія ресурсів та гарантія врожаю.</p>
+                        <p>Ми не гадаємо на кавовій гущі, ми використовуємо дані. Моніторинг стану дерев, аналіз ґрунту.
+                        </p>
+                        <p style="margin-top: 10px;">Систематизація, виконання робіт, технологічні карти, інтегрована
+                            система захисту і добрив дозволяють нам задовільнити потреби рослин, а також уникати
+                            ураження хворобами та шкідниками, що можуть вплинути на результат.</p>
+                        <p style="margin-top: 10px;">Технологічність – це економія ресурсів та гарантія врожаю.</p>
                     </div>
                 </div>
                 <!-- Service 2: Genetics -->
                 <div class="service-card">
                     <div class="card-image" style="background-image: url('hero_genetics.jpg');"></div>
                     <div class="card-content">
-                        <h3>Еталонна Генетика: Фундамент Інвестиції</h3>
-                        <p>«Інвестиція в сад має спиратися на міцний монолітний фундамент — бездоганну генетику.
-                            Неякісний саджанець генерує збитки, тому ми обираємо єдиний правильний шлях: сертифіковані
-                            розплідники з бездоганною репутацією.</p>
-                        <p style="margin-top: 10px;">Ми гарантуємо 100% сортність та повну відсутність вірусних хвороб,
-                            фітоплазми чи бактеріозу. Тільки здоровий матеріал забезпечує максимальне запилення, вихід
-                            ядра понад 42% та прогнозований прибуток, а не боротьбу за виживання саду.»</p>
+                        <h3>Генетика: Фундамент Інвестиції</h3>
+                        <p>Інвестиція в сад має спиратись на міцний монолітний фундамент — бездоганну генетику.
+                            Неякісний саджанець генерує збиток. Тому потрібно обирати єдиний правильний шлях. Це якісний
+                            садивний матеріал.</p>
+                        <p style="margin-top: 10px;">Ви маєте знати — що саджанець, який ви садите, відповідає всім
+                            сортовим характеристикам. Що він не заражений хворобами, вірусами, бактеріями — що можуть
+                            значно вплинути на продуктивність насадження або зробити насадження збитковим.</p>
+                        <p style="margin-top: 10px;">Тільки здоровий і якісний садивний матеріал забезпечує максимальний
+                            рівень продуктивності насадження.</p>
                     </div>
                 </div>
                 <!-- Service 3: Solar Energy -->
                 <div class="service-card">
-                    <div class="card-image" style="background-image: url('smart_irrigation.jpg');"></div>
+                    <div class="card-image" style="background-image: url('solar_panels.png');"></div>
                     <div class="card-content">
                         <h3>Енергія Сонця</h3>
                         <p>Сучасний сад має бути автономним. Ми впроваджуємо рішення на базі сонячної енергетики для
@@ -97,9 +102,11 @@
                     <div class="card-image" style="background-image: url('harvest_scale.jpg');"></div>
                     <div class="card-content">
                         <h3>Масштаб та Експертиза</h3>
-                        <p>Від присадибної ділянки до промислових садів площею 500 га. Євгеній Лайтер та команда Corylus
-                            Tech пропонують повний супровід: від аналізу ґрунту в Тетієві до налаштування логістики
-                            збуту. Ми знаємо, як перетворити землю на працюючий актив.</p>
+                        <p>Від присадибної ділянки до промислових садів, площею сотні гектарів.</p>
+                        <p style="margin-top: 10px;">Команда Corylus Tech пропонує повний супровід. Від аналізу ґрунтів
+                            до підбору сортового складу, а також перевірку ділянки на придатність для створення
+                            фундукового саду і подальшу логістику збуту.</p>
+                        <p style="margin-top: 10px;">Ми знаємо, як перетворити землю на працюючий актив.</p>
                     </div>
                 </div>
             </div>
@@ -170,10 +177,48 @@
                 <div class="form-embed">
                     <h3>Анкета Продавця</h3>
                     <p style="font-size: 0.9rem; margin-bottom: 2rem; color: #666;">Додайте свій врожай у загальну
-                        партію для експорту.</p>
-                    <a href="https://forms.gle/your_google_form_link" target="_blank" class="btn-form">
-                        <i class="fab fa-google"></i> Перейти до форми
-                    </a>
+                        партію.</p>
+
+                    <form action="https://api.web3forms.com/submit" method="POST" id="market-form" class="corylus-form">
+                        <!-- Налаштування Web3Forms: Замініть YOUR_ACCESS_KEY_HERE на свій ключ після реєстрації на web3forms.com -->
+                        <input type="hidden" name="access_key" value="debd2ede-fdb2-4301-b510-f349de31e943">
+                        <input type="hidden" name="subject" value="Нова пропозиція врожаю - Corylus Market">
+                        <input type="hidden" name="from_name" value="Corylus Market">
+
+                        <div class="form-group">
+                            <label for="name">Ваше Ім'я / Компанія *</label>
+                            <input type="text" id="name" name="name" required placeholder="Іван Іванов">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Номер телефону *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+38 (000) 000-00-00">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="variety">Сорт фундука *</label>
+                            <input type="text" id="variety" name="variety" required
+                                placeholder="Напр. Каталонський, Барселонський">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="volume">Об'єм врожаю (кілограм) *</label>
+                            <input type="number" id="volume" name="volume" required min="100" placeholder="Напр. 5000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="location">Область / Локація *</label>
+                            <input type="text" id="location" name="location" required
+                                placeholder="Київська обл., Біла Церква">
+                        </div>
+
+                        <!-- Антиспам поле -->
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                        <button type="submit" class="btn-form">Надіслати пропозицію</button>
+                        <p id="form-result"
+                            style="display:none; margin-top:15px; font-weight:bold; color:var(--primary-color);"></p>
+                    </form>
                 </div>
             </div>
         </div>
